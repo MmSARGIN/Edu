@@ -7,6 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Lessons from './components/Lessons';
 import Teachers from './components/Teachers';
 import Home from './pages/Home';
+import Contact from './components/Contact';
 
 
 
@@ -27,7 +28,7 @@ function App() {
         <Route path="/teachers" element={<Teachers/>} />
         <Route path="/lessons" element={ <Lessons /> } />
         <Route path="/sign" element={ <SignIn /> } />
-        <Route path="/contact" />
+        <Route path="/contact"  element={<Contact/>} />
         <Route path="/profile" />
       </Routes>
       
