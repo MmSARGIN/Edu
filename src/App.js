@@ -1,9 +1,8 @@
 import './App.css';
 import SignIn from './components/SignIn';
-import { useSelector, useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Lessons from './components/Lessons';
 import Teachers from './components/Teachers';
 import Home from './pages/Home';
@@ -13,8 +12,7 @@ import Contact from './components/Contact';
 
 
 function App() {
-  const text = useSelector((state) => state.text.login);
-  const dispatch = useDispatch();
+
   
   
   return (

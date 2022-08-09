@@ -1,5 +1,5 @@
 import {React , useState, useEffect} from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Teachers = () => {
@@ -22,34 +22,35 @@ const Teachers = () => {
   return (
     <div className='flex  flex-wrap w-full justify-center mt-16'>
         
-                         <section class="mb-2 text-gray-700 rounded-xl bg-blue-100">
-                         <div class="text-center md:max-w-xl p-4 rounded-lg lg:max-w-3xl mx-auto">
-                           <h3 class="text-3xl font-bold mb-6 text-gray-600">Teachers</h3>
-                           <p class="mb-6 pb-2 md:mb-12 md:pb-0 text-gray-500">
+                         <section className="mb-2">
+                         <div className="text-center md:max-w-xl p-4 rounded-lg lg:max-w-3xl mx-auto">
+                           <h3 className="text-3xl font-bold mb-6 text-blue-500">Teachers</h3>
+                           <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-blue-500">
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
                              iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
                              porro a pariatur veniam.
                            </p>
                          </div>
                          
-                         <div class="grid p-4 md:grid-cols-3 gap-6 lg:gap-12 text-center">
+                         <div className="grid p-4 md:grid-cols-3 gap-6 lg:gap-12 text-center">
                          {products ? products.map((item) => (
-                           <div class="mb-0">
-                             <div class="flex justify-center mb-6">
+                           <div className="mb-0" key={item.id}>
+                             <div className="flex justify-center mb-6">
                                                       <img
                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"
-                                    class="rounded-full shadow-lg w-32"
+                                    className="rounded-full shadow-lg w-32"
+                                    alt='s'
                                   />
                              </div>
-                             <h5 class="text-xl font-semibold mb-4">{item.description.slice(1, 10).toUpperCase()}</h5>
-                             <h6 class="font-semibold text-blue-600 mb-4">{item.category.toUpperCase()}</h6>
-                             <p class="mb-4">
+                             <h5 className="text-xl font-semibold mb-4">{item.description.slice(1, 10).toUpperCase()}</h5>
+                             <h6 className="font-semibold text-blue-500 mb-4">{item.category.toUpperCase()}</h6>
+                             <p className="mb-4">
                                <svg
                                  aria-hidden="true"
                                  focusable="false"
                                  data-prefix="fas"
                                  data-icon="quote-left"
-                                 class="w-6 pr-2 inline-block"
+                                 className="w-6 pr-2 inline-block"
                                  role="img"
                                  xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 512 512"
@@ -60,14 +61,14 @@ const Teachers = () => {
                                  ></path></svg>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                                praesentium voluptatum deleniti atque corrupti.
                              </p>
-                             <ul class="flex justify-center mb-0">
+                             <ul className="flex justify-center mb-0">
                                <li>
                                  <svg
                                    aria-hidden="true"
                                    focusable="false"
                                    data-prefix="fas"
                                    data-icon="star"
-                                   class="w-4 text-yellow-500"
+                                   className="w-4 text-yellow-500"
                                    role="img"
                                    xmlns="http://www.w3.org/2000/svg"
                                    viewBox="0 0 576 512"
@@ -84,7 +85,7 @@ const Teachers = () => {
                                    focusable="false"
                                    data-prefix="fas"
                                    data-icon="star"
-                                   class="w-4 text-yellow-500"
+                                   className="w-4 text-yellow-500"
                                    role="img"
                                    xmlns="http://www.w3.org/2000/svg"
                                    viewBox="0 0 576 512"
@@ -101,7 +102,7 @@ const Teachers = () => {
                                    focusable="false"
                                    data-prefix="fas"
                                    data-icon="star"
-                                   class="w-4 text-yellow-500"
+                                   className="w-4 text-yellow-500"
                                    role="img"
                                    xmlns="http://www.w3.org/2000/svg"
                                    viewBox="0 0 576 512"
@@ -118,7 +119,7 @@ const Teachers = () => {
                                    focusable="false"
                                    data-prefix="fas"
                                    data-icon="star"
-                                   class="w-4 text-yellow-500"
+                                   className="w-4 text-yellow-500"
                                    role="img"
                                    xmlns="http://www.w3.org/2000/svg"
                                    viewBox="0 0 576 512"
@@ -135,7 +136,7 @@ const Teachers = () => {
                                    focusable="false"
                                    data-prefix="far"
                                    data-icon="star"
-                                   class="w-4 text-yellow-500"
+                                   className="w-4 text-yellow-500"
                                    role="img"
                                    xmlns="http://www.w3.org/2000/svg"
                                    viewBox="0 0 576 512"
