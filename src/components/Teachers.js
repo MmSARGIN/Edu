@@ -20,7 +20,7 @@ const Teachers = () => {
             })
     }, [])
   return (
-    <div className='flex flex-row flex-wrap w-5/6 justify-center mt-16'>
+    <div className='flex  flex-wrap w-full justify-center mt-16'>
         
                          <section class="mb-2 text-gray-700 rounded-xl bg-blue-100">
                          <div class="text-center md:max-w-xl p-4 rounded-lg lg:max-w-3xl mx-auto">
