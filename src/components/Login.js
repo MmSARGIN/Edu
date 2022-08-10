@@ -162,7 +162,6 @@ const handleClick = (e)=> {
                   </div>
                   <a href="#!" className="text-blue-400">Forgot password?</a>
                 </div>
-      
                 <div className="text-center lg:text-left">
                   <button
                     type="button"

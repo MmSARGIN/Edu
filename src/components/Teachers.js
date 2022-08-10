@@ -22,8 +22,8 @@ const Teachers = () => {
   return (
     <div className='flex  flex-wrap w-full justify-center mt-16'>
         
-                         <section className="mb-2">
-                         <div className="text-center md:max-w-xl p-4 rounded-lg lg:max-w-3xl mx-auto">
+                         <section className="mb-2 flex flex-col justify-center w-full items-center">
+                         <div className="text-center md:max-w-xl p-4 lg:max-w-3xl mx-auto bg-blue-50 rounded-t-3xl">
                            <h3 className="text-3xl font-bold mb-6 text-blue-500">Teachers</h3>
                            <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-blue-500">
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
@@ -32,9 +32,9 @@ const Teachers = () => {
                            </p>
                          </div>
                          
-                         <div className="grid p-4 md:grid-cols-3 gap-6 lg:gap-12 text-center">
+                         <div className="grid p-4 w-11/12 md:grid-cols-3 rounded-3xl bg-white gap-6 lg:gap-12 text-center">
                          {products ? products.map((item) => (
-                           <div className="mb-0" key={item.id}>
+                           <div className="mb-0 bg-blue-200 p-2 rounded-3xl" key={item.id}>
                              <div className="flex justify-center mb-6">
                                                       <img
                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"

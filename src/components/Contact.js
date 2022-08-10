@@ -4,6 +4,7 @@ const Contact = () => {
    const handleClick = () =>{
       console.log('oldu');
    }
+   
   return (
     <div className='w-full flex items-center justify-center'>
         
@@ -12,27 +13,24 @@ const Contact = () => {
       <div className="flex flex-wrap lg:justify-between -mx-4">
          <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
             <div className="max-w-[570px] mb-12 lg:mb-0">
-               <span className="block mb-4 text-base text-blue-500 text-primary font-semibold">
-               İletişime Geç
-               </span>
+               
                <h2
                   className="
                   text-blue-500
                   mb-6
                   uppercase
                   font-bold
-                  text-[32px]
-                  sm:text-[40px]
-                  lg:text-[36px]
-                  xl:text-[40px]
+                  text-[22px]
+                  sm:text-[22px]
+                  lg:text-[22px]
+                  xl:text-[20px]
                   "
                   >
                   BİZİMLE PAYLAŞMAK İSTEDİĞİNİZ BİR ŞEY VAR MI ?
                </h2>
                <p className="text-base text-body-color text-blue-500 leading-relaxed mb-9">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  adiqua minim veniam quis nostrud exercitation ullamco
+                  eius tempor incididunt ut labore et dolore magna aliqua.
                </p>
                <div className="flex mb-8 max-w-[370px] w-full">
                   <div
@@ -149,7 +147,7 @@ const Contact = () => {
             </div>
          </div>
          <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
-            <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
+            <div className="bg-blue-400 relative rounded-lg p-8 sm:p-12 shadow-lg">
                <form>
                   <div className="mb-6">
                      <input
@@ -225,13 +223,12 @@ const Contact = () => {
                         type="submit"
                         className="
                         w-full
-                        text-blue-600
-                        bg-primary
-                        rounded
-                        border border-primary
-                        p-3
+                        text-white
+                        bg-blue-600
+                        rounded-full
+                        p-2
                         transition
-                        hover:bg-opacity-90
+                        hover:bg-blue-700
                         "
                         onClick={handleClick}
                         >
