@@ -12,7 +12,7 @@ const [products, setproducts] = useState([])
             
             })
     }, [])
-
+    // https://fakestoreapi.com/products?limit=10
 
   return (
     <div className='flex flex-row flex-wrap w-full items-center justify-center'>
