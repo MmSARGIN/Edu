@@ -10,7 +10,10 @@ const [products, setproducts] = useState([])
                 console.log(json);
                 setproducts(json);
             
-            })
+            });
+
+            fetch('https://afternoon-dusk-68458.herokuapp.com/users')
+            .then(res => console.log(res))
     }, [])
     // https://fakestoreapi.com/products?limit=10
 
