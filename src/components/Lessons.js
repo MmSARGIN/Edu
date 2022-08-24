@@ -3,8 +3,15 @@ import { React , useEffect} from 'react';
 
 const Lessons = () => {
 // const [products, setproducts] = useState([])
+
     useEffect(() => {
-        fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson')
+      const requestOptions = {
+        method: 'GET',
+        headers: { 'Authorization' : 'Bearer 00D8d000005zrd6!AREAQHRwQK_5V3eCWCTtAI7UQMKDK5hS7sIzGlcGqSo64SsQhucVetztySgDJyvFD5qM4wmdgFAaGsb5B643u4.kmjOnOZCv'},
+        
+       
+      };
+        fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson', requestOptions)
             .then(res=>res.json())
             .then(json=>{
                 console.log(json);
