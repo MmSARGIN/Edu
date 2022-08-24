@@ -1,8 +1,8 @@
-import { React , useEffect, useState} from 'react';
+import { React , useEffect} from 'react';
 
 
 const Lessons = () => {
-const [products, setproducts] = useState([])
+// const [products, setproducts] = useState([])
     useEffect(() => {
         fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson')
             .then(res=>res.json())
@@ -12,8 +12,8 @@ const [products, setproducts] = useState([])
             
             });
 
-            fetch('https://afternoon-dusk-68458.herokuapp.com/users')
-            .then(res => console.log(res))
+            // fetch('https://afternoon-dusk-68458.herokuapp.com/users')
+            // .then(res => console.log(res))
     }, [])
     // https://fakestoreapi.com/products?limit=10
 
@@ -61,7 +61,7 @@ const [products, setproducts] = useState([])
     </div>
   </div>
 </section>
-        {products ? products.map((item) => (
+        {/* {products ? products.map((item) => (
                            <div className="flex justify-center mt-20 w-2/4">
                           <div className="block p-6 rounded-lg shadow-lg bg-blue-100 w-3/4">
                             
@@ -77,7 +77,7 @@ const [products, setproducts] = useState([])
                              </div>
                            </div>
                          </div> 
-        )) : 'Loading'}
+        )) : 'Loading'} */}
     </div>
   )
 }
