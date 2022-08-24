@@ -4,11 +4,11 @@ import { React , useEffect, useState} from 'react';
 const Lessons = () => {
 const [products, setproducts] = useState([])
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=10')
+        fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson')
             .then(res=>res.json())
             .then(json=>{
                 console.log(json);
-                setproducts(json);
+                // setproducts(json);
             
             });
 
