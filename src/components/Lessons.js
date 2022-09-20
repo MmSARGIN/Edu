@@ -1,74 +1,74 @@
-import { React , useEffect} from 'react';
+import { React, useEffect } from 'react';
 
 
 const Lessons = () => {
-// const [products, setproducts] = useState([])
+  // const [products, setproducts] = useState([])
 
-    useEffect(() => {
-      const requestOptions = {
-        method: 'GET',
-        headers: { 'Authorization' : 'Bearer 00D8d000005zrd6!AREAQHRwQK_5V3eCWCTtAI7UQMKDK5hS7sIzGlcGqSo64SsQhucVetztySgDJyvFD5qM4wmdgFAaGsb5B643u4.kmjOnOZCv'},
-        
-       
-      };
-        fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson', requestOptions)
-            .then(res=>res.json())
-            .then(json=>{
-                console.log(json);
-                // setproducts(json);
-            
-            });
+  useEffect(() => {
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Authorization': 'Bearer 00D8d000005zrd6!AREAQHRwQK_5V3eCWCTtAI7UQMKDK5hS7sIzGlcGqSo64SsQhucVetztySgDJyvFD5qM4wmdgFAaGsb5B643u4.kmjOnOZCv' },
 
-            // fetch('https://afternoon-dusk-68458.herokuapp.com/users')
-            // .then(res => console.log(res))
-    }, [])
-    // https://fakestoreapi.com/products?limit=10
+
+    };
+    fetch('https://onlineedu-dev-ed.my.salesforce.com/services/apexrest/Lesson', requestOptions)
+      .then(res => res.json())
+      .then(json => {
+        console.log(json);
+        // setproducts(json);
+
+      });
+
+    // fetch('https://afternoon-dusk-68458.herokuapp.com/users')
+    // .then(res => console.log(res))
+  }, [])
+  // https://fakestoreapi.com/products?limit=10
 
   return (
-    <div className='flex flex-row flex-wrap w-full items-center justify-center'>
+    <div className='grid'>
       <section className="overflow-hidden text-gray-700 mt-12">
-  <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-    <div className="flex flex-wrap -m-1 md:-m-2">
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://guclumanset.com/wp-content/uploads/2022/08/lgs-matematik.jpg"/>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://millidusunce.com/wp-content/uploads/2019/12/turkce-1.png"/>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://80yilkucukcigliio.meb.k12.tr/meb_iys_dosyalar/35/25/313299/resimler/2020_04/k_01164359_english.jpg"/>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://hakkialtopio.meb.k12.tr/meb_iys_dosyalar/38/14/766315/resimler/2020_03/k_29234400_fenbilimleri.jpg"/>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://www.ozeldersdernegi.com/files/03-2020/ad24331/kimya-ogretmeni-kimya-dersi-farketmez-917911497_large.png"/>
-        </div>
-      </div>
-      <div className="flex flex-wrap w-1/3">
-        <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg"
-            src="https://ogretmensosyalbilgiler.files.wordpress.com/2019/01/3e973-2019-01-14_114822.jpg"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-        {/* {products ? products.map((item) => (
+        <div className="py-2 mx-auto lg:pt-12 ">
+          <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 items-center">
+            <div className="flex w-full">
+              <div className="w-full p-1 flex">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://guclumanset.com/wp-content/uploads/2022/08/lgs-matematik.jpg" />
+              </div>
+            </div>
+            <div className="flex flex-wrap h-full w-full ">
+              <div className="w-full p-1 flex justify-center">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://millidusunce.com/wp-content/uploads/2019/12/turkce-1.png" />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-full h-full ">
+              <div className="w-full p-1 flex justify-center">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://80yilkucukcigliio.meb.k12.tr/meb_iys_dosyalar/35/25/313299/resimler/2020_04/k_01164359_english.jpg" />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-full ">
+              <div className="w-full p-1 flex justify-center">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://hakkialtopio.meb.k12.tr/meb_iys_dosyalar/38/14/766315/resimler/2020_03/k_29234400_fenbilimleri.jpg" />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-full ">
+              <div className="w-full p-1 flex justify-center">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://www.ozeldersdernegi.com/files/03-2020/ad24331/kimya-ogretmeni-kimya-dersi-farketmez-917911497_large.png" />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-full">
+              <div className="w-full p-1 flex justify-center">
+                <img alt="gallery" className="block object-cover object-center w-full h-auto rounded-lg"
+                  src="https://ogretmensosyalbilgiler.files.wordpress.com/2019/01/3e973-2019-01-14_114822.jpg" />
+              </div>
+            </div>
+          </div>
+        </div >
+      </section >
+      {/* {products ? products.map((item) => (
                            <div className="flex justify-center mt-20 w-2/4">
                           <div className="block p-6 rounded-lg shadow-lg bg-blue-100 w-3/4">
                             
@@ -85,7 +85,7 @@ const Lessons = () => {
                            </div>
                          </div> 
         )) : 'Loading'} */}
-    </div>
+    </div >
   )
 }
 
