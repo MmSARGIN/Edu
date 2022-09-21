@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Text = () => {
   return (
-    <div className='flex w-3/4 flex-col mt-10 sm:mt-0 sm:justify-center items-center'>
+    <div className='flex w-3/4 flex-col sm:justify-center items-center'>
 
       <p className="text-xl font-semibold mb-5 leading-relaxed p-2 text-white bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:0px_5px]
@@ -14,13 +14,13 @@ const Text = () => {
         Çocuğunuzun eğitimini şansa bırakmayın. Nitelikli öğretmenler ve doyurucu ders içerikleriyle OnlineEdu yakında hizmetinizde.
       </p>
       <div className='flex justify-between flex-col sm:flex-row w-full'>
-        <Link className='bg-amber-400 bg-gradient-to-r from-amber-200 to-amber-500 
+        <Link className='bg-amber-500 bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:100%_0%]
               bg-top
               bg-no-repeat duration-1000  hover:bg-[length:100%_100%] group-hover:bg-[length:100%_100%] w-full mb-5 sm:mb-0 sm:w-2/5 flex items-center justify-center text-base p-2 rounded-full text-white' to="/contact" >
           İletişim
         </Link>
-        <Link className='bg-amber-400 bg-gradient-to-r from-amber-200 to-amber-500 
+        <Link className='bg-amber-500 bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:100%_0%]
               bg-top
               bg-no-repeat duration-1000  hover:bg-[length:100%_100%] group-hover:bg-[length:100%_100%] w-full mb-5 sm:mb-0 sm:w-2/5 flex items-center justify-center text-base p-2 rounded-full text-white' to="/sign">

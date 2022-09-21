@@ -14,10 +14,9 @@ const Home = () => {
   //   console.log(response);
   // })
   return (
-    <div className='flex flex-col items-center h-screen sm:h-full '>
+    <div className='flex flex-col h-full'>
       <Carousel />
-      <Info />
-      <Table />
+
 
     </div>
   )

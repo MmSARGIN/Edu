@@ -17,7 +17,7 @@ function App() {
 
   return (
 
-    <div className='flex flex-col bg-gradient-to-r to-sky-200 from-sky-200'>
+    <div className='flex flex-col h-screen items-center justify-center'>
       <Navbar className='nav' />
 
       <Routes>
