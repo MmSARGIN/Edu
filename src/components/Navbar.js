@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = (props) => {
+
   return (
 
-    <div className='bg-white font-serif flex flex-row fixed-top justify-center sm:justify-evenly border-b-2 w-full'>
+    <div className='bg-white font-serif flex flex-row fixed-top justify-center sm:justify-evenly border-b w-full'>
       <div className='flex items-center p-3 justify-center w-full sm:w-2/5 sm:justify-start'>
-        <h1 className='text-blue-400 font-bold lg:text-xl  md:text-lg sm:text-sm font-serif bg-gradient-to-r from-amber-200 to-amber-500 
+        <h1 className='text-blue-500 font-bold lg:text-xl  md:text-lg sm:text-sm font-serif bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:0px_3px]
               bg-left-bottom
               bg-no-repeat
@@ -16,7 +17,7 @@ const Navbar = (props) => {
               duration-500
               hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]'>OnlineEdu </h1>
       </div>
-      <div className='justify-center w-full text-blue-400 lg:text-lg md:text-base sm:text-sm hidden sm:flex items-center font-medium  '>
+      <div className='justify-center w-full text-blue-500 lg:text-lg md:text-base sm:text-sm hidden sm:flex items-center font-medium  '>
         <div className='p-2'>
           <Link to="/" className='flex w-full bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:0px_3px]
@@ -55,7 +56,7 @@ const Navbar = (props) => {
         </div>
 
       </div>
-      <div className='hidden w-2/5 justify-end text-blue-400 lg:text-lg md:text-base sm:text-sm  sm:flex items-center font-semibold'>
+      <div className='hidden w-2/5 justify-end text-blue-500 lg:text-lg md:text-base sm:text-sm  sm:flex items-center font-semibold'>
         <div className='p-2'>
           <Link className='flex w-full bg-gradient-to-r from-amber-200 to-amber-500 
               bg-[length:0px_3px]

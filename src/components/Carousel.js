@@ -8,7 +8,7 @@ const Carousel = () => {
 
 
   return (
-    <div className='w-full h-full bg-gradient-to-r to-sky-400 from-sky-100 flex flex-col lg:flex-row items-center p-5 justify-around'>
+    <div className='w-full h-full bg-white flex flex-col lg:flex-row items-center p-5 justify-around'>
       <div className="flex items-center justify-center lg:w-7/12 w-9/12 h-full p-3">
         <div id="carouselExampleCaptions" className="carousel slide carousel-fade relative" data-bs-ride="carousel">
           <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
