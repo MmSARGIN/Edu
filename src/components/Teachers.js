@@ -11,7 +11,7 @@ const Teachers = () => {
   };
   const [products, setproducts] = useState([])
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=10')
+    fetch('https://fakestoreapi.com/products?limit=15')
       .then(res => res.json())
       .then(json => {
         console.log(json);
@@ -20,19 +20,19 @@ const Teachers = () => {
       })
   }, [])
   return (
-    <div className='flex  flex-wrap w-full justify-center mt-16'>
+    <div className='flex w-full'>
 
-      <section className="mb-2 flex flex-col justify-center w-full items-center">
-        <div className="text-center md:max-w-3xl p-4 lg:max-w-3xl mx-auto bg-blue-50 rounded-t-3xl">
-          <h3 className="text-3xl font-bold mb-6 text-blue-500">Teachers</h3>
-          <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-blue-500">
+      <section className="flex flex-col">
+        <div className="text-center w-full mx-auto bg-blue-50 rounded-t-3xl">
+          <h3 className="text-3xl font-bold text-blue-600">Teachers</h3>
+          <p className=" text-black">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
             iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
             porro a pariatur veniam.
           </p>
         </div>
 
-        <div className="grid p-4 w-11/12 md:grid-cols-3 rounded-3xl bg-white gap-6 lg:gap-12 text-center">
+        <div className="grid p-4 w-full md:grid-cols-4 rounded-b-3xl bg-blue-50 gap-6 lg:gap-10 text-center">
           {products ? products.map((item) => (
             <div className="mb-0 bg-blue-200 p-2 rounded-3xl" key={item.id}>
               <div className="flex justify-center mb-6">

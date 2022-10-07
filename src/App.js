@@ -18,7 +18,7 @@ function App() {
   return (
 
     <div className='flex flex-col h-screen items-center justify-center'>
-      <Navbar className='nav' />
+      {/* <Navbar className='nav' /> */}
 
       <Routes>
         <Route path="/login" element={<Login />} />

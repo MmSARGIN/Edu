@@ -8,8 +8,8 @@ const Contact = () => {
    return (
       <div className='w-full flex items-center justify-center'>
 
-         <section className="bg-blue-50 w-10/12  py-[120px] overflow-hidden relative z-10">
-            <div className="container">
+         <section className="bg-blue-50 w-full p-24 overflow-auto relative z-10">
+            <div className="container ">
                <div className="flex flex-wrap justify-between lg:justify-center -mx-4">
                   <div className="flex justify-center w-full lg:w-1/2 xl:w-6/12 px-4">
                      <div className="max-w-[570px] mb-12 lg:mb-0">
@@ -147,7 +147,7 @@ const Contact = () => {
                      </div>
                   </div>
                   <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
-                     <div className="bg-blue-400 relative rounded-lg p-8 sm:p-12 shadow-lg">
+                     <div className="bg-blue-400  relative rounded-lg p-8 sm:p-12 shadow-lg">
                         <form>
                            <div className="mb-6">
                               <input
@@ -202,7 +202,7 @@ const Contact = () => {
                            </div>
                            <div className="mb-6">
                               <textarea
-                                 rows="6"
+                                 rows="4"
                                  placeholder="Mesajınız"
                                  className="
                         w-full
