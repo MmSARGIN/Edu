@@ -7,15 +7,16 @@ import 'tw-elements';
 import { Provider } from 'react-redux'
 import store from './app/store';
 import { BrowserRouter } from "react-router-dom";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </Provider>
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
   </BrowserRouter>
 );
 

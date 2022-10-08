@@ -20,11 +20,11 @@ const Teachers = () => {
       })
   }, [])
   return (
-    <div className='flex w-full'>
+    <div className='flex w-3/4 h-full'>
 
       <section className="flex flex-col">
-        <div className="text-center w-full mx-auto bg-blue-50 rounded-t-3xl">
-          <h3 className="text-3xl font-bold text-blue-600">Teachers</h3>
+        <div className="text-center w-full mt-16 mx-auto rounded-t-3xl">
+          <h3 className="text-3xl font-bold text-blue-600">Öğretmenlerimiz</h3>
           <p className=" text-black">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
             iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
@@ -32,9 +32,9 @@ const Teachers = () => {
           </p>
         </div>
 
-        <div className="grid p-4 w-full md:grid-cols-4 rounded-b-3xl bg-blue-50 gap-6 lg:gap-10 text-center">
+        <div className="grid p-4 mt-16 w-full md:grid-cols-3 rounded-b-3xl gap-6 lg:gap-10 text-center">
           {products ? products.map((item) => (
-            <div className="mb-0 bg-blue-200 p-2 rounded-3xl" key={item.id}>
+            <div className="mb-0 p-2 rounded-3xl" key={item.id}>
               <div className="flex justify-center mb-6">
                 <img
                   src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"

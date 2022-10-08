@@ -1,11 +1,14 @@
 import { React, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setInfo } from '../slice/infoSlice';
+// import { setInfo } from '../slice/infoSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { register } from "../firebase";
+
 
 const Login = () => {
   const info = useSelector((state) => state.info.default);
+
 
   const dispatch = useDispatch();
   const [email, setemail] = useState('');
@@ -17,44 +20,51 @@ const Login = () => {
       position: toast.POSITION.TOP_CENTER
     });
   };
-  const handleChange = (e) => {
 
-    if (e.target.name === 'email') {
-      setemail(e.target.value);
-      console.log(email)
-    } else if (e.target.name === 'password') {
-      setpassword(e.target.value);
-      console.log(password)
-    }
-    setinfo({
-      email: email,
-      password: password
-    })
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const user = await register(email, password);
+    console.log("User", user);
 
   }
+  // const handleChange = (e) => {
 
-  const handleClick = (e) => {
-    if (info.email !== '' && info.password !== '') {
-      dispatch(setInfo({ email: memberInfo.email, password: memberInfo.password }));
-      console.log('basarılı')
-      notify();
-    } else {
-      console.log('boş yollama')
-    }
-    setemail('');
-    setpassword('');
+  //   if (e.target.name === 'email') {
+  //     setemail(e.target.value);
+  //     console.log(email)
+  //   } else if (e.target.name === 'password') {
+  //     setpassword(e.target.value);
+  //     console.log(password)
+  //   }
+  //   setinfo({
+  //     email: email,
+  //     password: password
+  //   })
 
-  }
+  // }
+
+  // const handleClick = (e) => {
+  //   if (info.email !== '' && info.password !== '') {
+  //     dispatch(setInfo({ email: memberInfo.email, password: memberInfo.password }));
+  //     console.log('basarılı')
+  //     notify();
+  //   } else {
+  //     console.log('boş yollama')
+  //   }
+  //   setemail('');
+  //   setpassword('');
+
+  // }
 
 
   return (
-    <div className='w-full flex items-center justify-center'>
-      <div className="w-full h-full">
+    <div className='flex items-center mt-20 justify-center'>
+      <div className="">
         <ToastContainer />
-        <section className="h-screen w-full bg-blue-100">
-          <div className="px-6 h-full text-gray-800">
+        <section className="">
+          <div className="px-6  text-gray-800">
             <div
-              className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
+              className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap  g-6"
             >
               <div
                 className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
@@ -66,14 +76,14 @@ const Login = () => {
                 />
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                <form onChange={handleChange}>
+                <form onSubmit={handleSubmit}>
                   <div className="flex flex-row items-center justify-center lg:justify-start">
                     <p className="text-lg text-blue-400 mb-0 mr-4">Sign in with</p>
                     <button
                       type="button"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
-                      className="inline-block p-3 bg-white text-blue-500 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                      className="inline-block p-3 bg-blue-50 text-blue-500 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
                     >
 
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="w-4 h-4">
@@ -89,7 +99,7 @@ const Login = () => {
                       type="button"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
-                      className="inline-block p-3 bg-white text-blue-500 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-500 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                      className="inline-block p-3 bg-blue-50 text-blue-500 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-500 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
                     >
 
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4">
@@ -105,7 +115,7 @@ const Login = () => {
                       type="button"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
-                      className="inline-block p-3 text-blue-500 bg-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-600 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                      className="inline-block p-3 text-blue-500 bg-blue-50 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-600 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
                     >
 
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4">
@@ -130,7 +140,7 @@ const Login = () => {
                       type="email"
                       name='email'
                       value={email}
-
+                      onChange={e => setemail(e.target.value)}
                       className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       id="exampleFormControlInput2"
                       placeholder="Email address"
@@ -143,7 +153,7 @@ const Login = () => {
                       type="password"
                       name='password'
                       value={password}
-
+                      onChange={e => setpassword(e.target.value)}
                       className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       id="exampleFormControlInput2"
                       placeholder="Password"
@@ -164,9 +174,9 @@ const Login = () => {
                   </div>
                   <div className="text-center lg:text-left">
                     <button
-                      type="button"
-                      onClick={handleClick}
-                      className="inline-block px-7 py-3 text-blue-500 bg-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-500 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                      type="submit"
+                      disabled={!email || !password}
+                      className="inline-block px-7 py-3 text-blue-500 bg-blue-50 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-500 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     >
                       Login
                     </button>

@@ -20,11 +20,11 @@ const SignIn = () => {
 
 
   return (
-    <div className='w-full flex items-center justify-center'>
-      <div className="w-full h-full">
-        <section className="h-screen w-full bg-blue-100">
+    <div className=' flex items-center mt-16 justify-center'>
+      <div className="">
+        <section className="">
           <div
-            className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
+            className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap g-6"
           >
             <div
               className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
@@ -133,8 +133,22 @@ const SignIn = () => {
                       className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white " id="grid-zip" type="text" placeholder="90210" />
                   </div>
                 </div>
-                <div className='flex justify-center w-full'>
-                  <button className='bg-blue-500 hover:bg-blue-700 w-3/4 mt-5 p-2 rounded-full text-white' onChange={formik.handleSubmit}>Kayıt Ol</button>
+                <div className="text-center mt-6 lg:text-left">
+                  <button
+                    type="button"
+                    onChange={formik.handleSubmit}
+                    className="inline-block px-7 py-3 text-blue-500 bg-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-500 hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    Login
+                  </button>
+                  <p className="text-sm text-blue-400 font-semibold mt-2 pt-1 mb-0">
+                    Don't have an account?
+                    <a
+                      href="#!"
+                      className="text-blue-600 hover:text-blue-700 ml-3 focus:text-blue-700 transition duration-200 ease-in-out"
+                    >Register</a
+                    >
+                  </p>
                 </div>
               </form>
             </div>
